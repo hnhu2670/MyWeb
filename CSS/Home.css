@@ -1,0 +1,554 @@
+/* giữa */
+#m-center {
+    width: 70%;
+    border-right: 1px solid navy
+}
+
+#m-center>div {
+    margin: 0px auto;
+    width: 100%;
+}
+
+/* nút tìm kiếm */
+.search {
+    border: 1px solid black;
+    width: 70%;
+    padding: 15px;
+    border-radius: 20px;
+    margin: 0px auto;
+}
+
+input#ip-search {
+    border: none;
+    font-size: 17px;
+    width: 90%;
+    background: none;
+}
+
+input#ip-search:focus {
+    outline: none;
+}
+
+/* story */
+div.h-content div.tab-story {
+    width: 80%;
+    margin: 0px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+ul.stories {
+    overflow-x: scroll;
+    justify-content: space-between;
+}
+
+ul.stories li.story {
+    width: 20%;
+    margin: 18px;
+}
+
+ul.stories #my_story {
+    position: relative;
+}
+
+ul.stories #my_story i {
+    font-size: 25px;
+    border: 1px solid black;
+    background-color: aliceblue;
+    border-radius: 20%;
+    position: absolute;
+    top: 45%;
+    right: 10%;
+}
+
+ul.stories li.story img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+li.story a>div:first-child {
+    border-radius: 50%;
+    width: 85px;
+    height: 85px;
+    background-color: black;
+    padding: 3px;
+    margin: 0px auto;
+}
+
+ul.stories::-webkit-scrollbar {
+    display: none;
+}
+
+li.story a>div:last-child>h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.btn {
+    position: absolute;
+    font-size: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    top: 40px;
+}
+
+.left {
+    left: 0;
+}
+
+.right {
+    right: 0;
+}
+
+*/
+/* trang nội dung chính */
+/* .h-content {
+    width: 100%;
+}
+
+.tab-story {
+    width: 95%;
+    margin: 10px auto;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+} */
+
+
+/* .tab-story ul.stories {
+    list-style-type: none;
+    align-items: stretch;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    transition: left 2s;
+    hiếu thêm */
+/* left: -4px; */
+/* scroll-behavior: auto; */
+*/
+/* scroll-behavior: smooth; */
+*/
+/* } */
+
+/* ul.stories::-webkit-scrollbar {
+    display: none;
+}
+
+.tab-story ul.stories li.story {
+    margin: 0 10px;
+
+}
+
+li.story a {
+    text-decoration: none;
+}
+
+.story-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    padding: 3px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    background: linear-gradient(gold, rgb(126, 17, 126), red);
+    position: relative;
+    transition: all 1s;
+}
+
+.story-img img {
+    width: 96%;
+    height: 96%;
+    border-radius: 50%;
+    border: 2px solid white;
+    object-fit: cover;
+
+}
+
+.story-name {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.btn {
+    position: absolute;
+    font-size: 30px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.left {
+    top: 40px;
+    left: 20px;
+}
+
+.right {
+    top: 40px;
+    right: 20px;
+} */
+
+/* myProfile */
+
+
+/* section.m-right {
+    width: auto;
+}
+
+.myProfile {
+    width: 100%;
+    height: 100px;
+    margin-top: 10px;
+}
+
+.myImg {
+    width: 25%;
+    border-radius: 50%;
+    padding-right: 10px;
+}
+
+.myImg img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.myName {
+    padding-top: 20px;
+}
+
+.myName h3 {
+    font-size: 35px;
+}
+
+.myName a {
+    text-decoration: none;
+}
+
+.myFriend {
+    background-color: blue;
+} */
+
+/* * thông báo */
+
+
+
+/* 
+.notes:hover .note {
+    opacity: 1;
+    width: 400px;
+} */
+
+
+
+/* bài viết */
+.h-center {
+    width: 80%;
+    margin: 0px auto;
+}
+
+.list-news {
+    width: 75%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    display: block;
+    opacity: 1;
+    transition: opacity 2s;
+
+}
+
+/* nút restore*/
+.restore {
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: lightblue;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    display: none;
+    /*sửa khi hoàn xóa*/
+    opacity: 0;
+    transition: opacity 2s;
+
+}
+
+.btn-restore {
+    margin-left: auto;
+    border: 5px;
+    font-size: 1.5rem;
+
+}
+
+/* 
+.n-name {
+    height: 120px;
+} */
+
+.n-name>div {
+    margin-right: 20px;
+}
+
+.n-name .myImg {
+    width: 12%;
+}
+
+.n-name .myImg img {
+    width: 100%;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.n-name .myName h3 {
+    font-size: 30px;
+    padding: 50% 0px;
+}
+
+.close {
+    margin-left: auto;
+    cursor: pointer;
+}
+
+.close i {
+    font-size: 40px;
+}
+
+.n-infor {
+    width: 100%;
+}
+
+.n-infor img {
+    width: 100%;
+    padding: 10px 0px;
+}
+
+.n-heart>div>i {
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+.story-img img:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.friend {
+    margin-top: 5px;
+}
+
+.friendss {
+    margin-top: 10%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 650px;
+    position: relative;
+}
+
+
+.friends {
+    width: auto;
+
+}
+
+.friends>ul>li {
+    list-style-type: none;
+
+}
+
+div.friend>a {
+    display: flex;
+    text-decoration: none;
+    margin: 5px;
+}
+
+div.friend-img {
+    position: relative;
+}
+
+.ative {
+    position: absolute;
+    right: 5%;
+    top: 70%;
+    ;
+}
+
+div.friend-img>img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    background: linear-gradient(gold, rgb(126, 17, 126), red);
+    transition: all 1s;
+}
+
+div.friend-img>img:hover {
+    transform: scale(1.2, 1.2);
+
+}
+
+div.friend-name {
+    text-align: center;
+    padding: 7% 0 0 3%;
+}
+
+div.friend-name span {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+div.online {
+    margin: 5px;
+    display: flex;
+    /* background-color: lightblue; */
+}
+
+div.online>h3 {
+    margin: 0 0 5px 0;
+    font-size: 25px;
+}
+
+div.online>div {
+    display: flex;
+    margin-left: auto;
+    margin-right: 5px;
+    justify-content: center;
+    border: 1px solid black;
+    padding: 3px;
+    border-radius: 15px;
+
+}
+
+div.online>div>div>i {
+    text-align: center;
+    padding-top: 5px;
+}
+
+div.online>div input {
+    background: none;
+    border: none;
+}
+
+div.online>div input:focus {
+    outline: none;
+}
+
+div.n-heart {
+    cursor: pointer;
+    position: relative;
+}
+
+div.n-heart>div {
+    width: 5%;
+    margin: 0 10px;
+}
+
+div.n-heart>div>img {
+    width: 100%;
+}
+
+/* mini chat */
+.mini-chat {
+    position: fixed;
+    background-color: #ffff;
+    width: 20%;
+    height: 50%;
+    bottom: 0;
+    right: 5%;
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+    flex-direction: column;
+    justify-content: space-between;
+    /* display: none; */
+    z-index: 99;
+}
+
+.mini-chat>div>div:first-child {
+    width: 80%;
+}
+
+.mini-chat .icon {
+    font-size: 30px;
+    margin-left: auto;
+    padding: 10px 0;
+}
+
+.mini-chat .icon i {
+    cursor: pointer;
+}
+
+.mini-chat div.chat {
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+    border: 1px solid navy;
+}
+
+div.chat input {
+    width: 90%;
+    border: none;
+    font-size: 15px;
+    background: none;
+}
+
+div.chat input:focus {
+    outline: none;
+}
+
+/* nút xem thêm */
+.box {
+    max-height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 25px;
+    padding: 10px 0px;
+}
+
+.add {
+    /* max-height: none ; */
+    background-color: aqua;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 17px;
+    color: gray;
+}
+
+.btn-less {
+    display: none;
+}
+
+.sub-heart {
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    background-color: aliceblue;
+    border-radius: 35px;
+    z-index: 9999;
+    width: 250px !important;
+}
+
+div.heart>i:hover .sub-heart {
+    display: block;
+
+}
+
+.sub-heart ul {
+    justify-content: space-between;
+}
+
+.sub-heart ul li {
+    width: 40%;
+    margin: 0 10px;
+}
+
+.sub-heart ul li>img {
+    width: 100%;
+    padding: 5px;
+}
