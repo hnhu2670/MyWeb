@@ -135,7 +135,7 @@ function load_follow() {
     let c = document.getElementById("items");
     c.innerHTML = "";
 
-    fetch(`/JSON/friends.json`)
+    fetch(`JSON/friends.json`)
         .then((res) => {
             return res.json();
         }).then((data) => {
