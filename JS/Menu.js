@@ -34,13 +34,13 @@ function load_subnote(obj) {
 function load_resnote(obj) {
     let a = document.getElementById("res-note")
     if (a.style.top === "10%") {
-            a.style.top = "-30%"
+            a.style.top = "-100%"
             a.style.bottom = "100%"
            
     }
     else {
         a.style.top = "10%"
-        a.style.bottom = "0%"
+        a.style.bottom = "35%"
     }
 }
 

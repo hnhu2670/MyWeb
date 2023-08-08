@@ -222,7 +222,7 @@ div.myName div.lname {
     border-bottom: 1px solid navy;
     text-align: center;
 }
- .notif{
+#thongBao .notif{
     height:700px;
     overflow-y: scroll;
     overflow-x: auto;
