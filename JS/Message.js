@@ -50,13 +50,13 @@ function click_Name(obj) {
     let s = document.querySelector("#pic span")
     setTimeout(() => {
         c.src = img.src
-        s.innerText =f.innerText
+        s.innerText = f.innerText
     }, 100)
 
     //đổi nội dung
     let text = document.querySelector("#text h3")
     let time = document.querySelector("#text span")
-    
+
     setTimeout(() => {
         text.innerText = n.innerText
         time.innerText = t.innerText
@@ -66,20 +66,26 @@ function click_Name(obj) {
 
 
 }
-function search(obj){
+function search(obj) {
     // let s = document.getElementById("ip-search").value
-    let s = obj.value
-    
+    let a = obj
+    let s = a.value
+
     let n = document.querySelectorAll(".f-name > h3")
-    for (let i=0;i<n.length;i++)
-    {
-        if(n[i].textContent.indexOf(s) >= 0)
-        {
-            n[i].style.color="gold"
+    if (s !== "") {
+        for (let i = 0; i < n.length; i++) {
+            if (n[i].textContent.indexOf(s) >= 0) {
+                n[i].style.color = "gold"
+            }
+
         }
-        else{
-            alert("Không tìm thấy")
-            break
-        }
+        setTimeout(() => {
+            for (i of n) {
+                i.style.color = "navy"
+            }
+        }, 3000)
     }
+
+
+
 }

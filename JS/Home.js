@@ -1,97 +1,19 @@
 function click_story() {
     const carousel = document.querySelector(".carousel")
-    // console.log(carousel)
     firstImg = carousel.querySelectorAll("li")[0]
-
     arrowIcons = document.querySelectorAll(".wrapper i")
-
-    let firstImgWidth = firstImg.clientWidth + 50
-    console.log(firstImgWidth)
+    let firstImgWidth = 300
     arrowIcons.forEach(icon => {
         icon.addEventListener("click", () => {
-            console.log(firstImgWidth)
+            // console.log(firstImgWidth)
             if (icon.id === "left") {
                 carousel.scrollLeft -= firstImgWidth
             }
-            else { carousel.scrollLeft += firstImgWidth }
+            if (icon.id === "right") { carousel.scrollLeft += firstImgWidth }
         })
 
     });
 }
-
-function changeLeft() {
-    let a = document.getElementById("stories");
-    let d = 50;
-    let computedStyle = window.getComputedStyle(a);
-    let leftValue = computedStyle.getPropertyValue("left");
-    let rightValue = computedStyle.getPropertyValue("right");
-
-    let left1 = parseInt(leftValue, 10);
-    let right1 = parseInt(rightValue, 10);
-    if (right1 >= 0) {
-
-        let newleft = left1 + d;
-        a.style.left = newleft + "px";
-    } else {
-        let a = document.getElementById("stories");
-        a.setAttribute("justify-content", "flex-start");
-    }
-
-};
-
-// function changeLeft(){
-//     let a = document.getElementById("stories");
-//     let scroll = a.scrollLeft;
-//     a.scrollLeft = scroll - 100;  
-//     console.log(scroll);
-
-
-// }
-
-// function changeRight(){
-//     let a = document.getElementById("stories");
-//     let scroll = a.scrollLeft;
-//     a.scrollLeft = scroll + 100;  
-//     console.log(scroll);
-
-// }
-
-// const scrollableContent = document.getElementById("tab-story");
-// const scrollContent = document.getElementById("stories");
-// let scrollLeftValue = 0;
-
-// function changeLeft() {
-//     // if (scrollLeftValue >= 0 && scrollLeftValue < scrollContent.scrollWidth - scrollableContent.clientWidth) {
-//       scrollLeftValue += 50; // Thay đổi giá trị cuộn ngang
-//       scrollContent.style.transform = `translateX(-${scrollLeftValue}px)`; // Áp dụng giá trị cuộn ngang bằng transform
-//     // }
-//   }
-
-//   function changeRight() {
-//     if (scrollLeftValue > 0) {
-//       scrollLeftValue -= 50; // Thay đổi giá trị cuộn ngang
-//       scrollContent.style.transform = `translateX(-${scrollLeftValue}px)`; // Áp dụng giá trị cuộn ngang bằng transform
-//     }
-//   }
-
-function changeRight() {
-    let a = document.getElementById("stories");
-    let d = 50;
-    let computedStyle = window.getComputedStyle(a);
-    let leftValue = computedStyle.getPropertyValue("left");
-    let rightValue = computedStyle.getPropertyValue("right");
-
-    let left1 = parseInt(leftValue, 10);
-    let right1 = parseInt(rightValue, 10);
-    if (right1 <= 30) {
-        let newleft = left1 - d;
-        a.style.left = newleft + "px";
-    }
-}
-
-
-
-
 
 /*Hiếu thêm sau*/
 
@@ -118,6 +40,29 @@ function load_friends() {
                             </div>
                         </a>
                     </div>`
+            }
+        });
+
+
+
+};
+
+
+function load_story() {
+
+    fetch(`JSON/stories.json`)
+        .then((res) => {
+            return res.json();
+        }).then((data) => {
+            for (let i of data) {
+                let a = document.getElementById("stories_main");
+                a.innerHTML +=
+                    `<li>
+                        <div><img src="${i.image}" alt=""></div>
+                        <div>
+                            <h2>${i.name}</h2>
+                        </div>
+                    </li>`
             }
         });
 
@@ -184,17 +129,22 @@ function minuschat() {
 function search(obj) {
     // let s = document.getElementById("ip-search").value
     let s = obj.value
-    console.log(s)
-    let n = document.querySelectorAll(".myName > a >h3")
-    for (let i = 0; i < n.length; i++) {
-        if (n[i].textContent.indexOf(s) >= 0) {
-            n[i].style.color = "gold"
+    // console.log(s)
+    if (s !== "") {
+        let n = document.querySelectorAll(".myName > a >h3")
+        for (let i = 0; i < n.length; i++) {
+            if (n[i].textContent.indexOf(s) >= 0) {
+                n[i].style.color = "gold"
+            }
+
         }
-        else {
-            alert("Không tìm thấy")
-            break
-        }
+        setTimeout(() => {
+            for (i of n) {
+                i.style.color = "navy"
+            }
+        }, 3000)
     }
+
 }
 
 // tìm kiếm bạn
